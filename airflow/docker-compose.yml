@@ -1,4 +1,3 @@
-
 x-airflow-common:
   &airflow-common
   image: apache/airflow:2.9.0
@@ -13,6 +12,7 @@ x-airflow-common:
     - ./dags:/opt/airflow/dags
     - ./plugins:/opt/airflow/plugins
     - ./logs:/opt/airflow/logs
+    - ../ml:/opt/airflow/ml
   depends_on:
     postgres:
       condition: service_healthy
@@ -41,7 +41,7 @@ services:
       -c "airflow db init &&
           airflow users create
             --username admin
-            --password admin
+            --password admin123
             --firstname Admin
             --lastname User
             --role Admin

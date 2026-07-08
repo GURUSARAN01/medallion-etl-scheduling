@@ -1,0 +1,10 @@
+Layer,Comparison,Pairs,Baseline mean,Candidate mean,Improvement (%),p-value,Significant
+Bronze,static vs heft,10,11.096759,12.26483,-10.526,0.001953,Yes
+Bronze,static vs xgboost,10,11.096759,11.536484,-3.963,0.193359,No
+Bronze,heft vs xgboost,10,12.26483,11.536484,5.938,0.009766,Yes
+Gold,static vs heft,10,15.061913,13.337869,11.446,0.001953,Yes
+Gold,static vs xgboost,10,15.061913,13.770923,8.571,0.005859,Yes
+Gold,heft vs xgboost,10,13.337869,13.770923,-3.247,0.083984,No
+Silver,static vs heft,10,16.455347,16.557592,-0.621,0.769531,No
+Silver,static vs xgboost,10,16.455347,16.536922,-0.496,0.695312,No
+Silver,heft vs xgboost,10,16.557592,16.536922,0.125,0.845703,No

@@ -1,0 +1,19 @@
+\begin{table}
+\caption{Average runtime, scheduling delay, and task duration by layer and scheduling strategy.}
+\label{tab:runtime-summary}
+\begin{tabular}{llrrrrr}
+\toprule
+Layer & Strategy & Runs & Avg. runtime (s) & Std. runtime (s) & Avg. delay (s) & Avg. task duration (s) \\
+\midrule
+Bronze & Static & 10 & 11.097 & 0.661 & 0.183 & 2.709 \\
+Bronze & HEFT & 10 & 12.265 & 0.370 & 0.183 & 2.726 \\
+Bronze & XGBoost & 10 & 11.536 & 0.489 & 0.189 & 2.738 \\
+Silver & Static & 10 & 16.455 & 0.447 & 0.174 & 4.871 \\
+Silver & HEFT & 10 & 16.558 & 0.664 & 0.176 & 4.930 \\
+Silver & XGBoost & 10 & 16.537 & 0.475 & 0.180 & 4.958 \\
+Gold & Static & 10 & 15.062 & 0.792 & 0.172 & 7.044 \\
+Gold & HEFT & 10 & 13.338 & 0.649 & 0.181 & 6.864 \\
+Gold & XGBoost & 10 & 13.771 & 0.772 & 0.172 & 6.999 \\
+\bottomrule
+\end{tabular}
+\end{table}
