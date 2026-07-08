@@ -8,6 +8,7 @@ x-airflow-common:
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__WEBSERVER__SECRET_KEY: 'thesis-secret-key-2026'
     AIRFLOW__LOGGING__LOGGING_LEVEL: INFO
+    _PIP_ADDITIONAL_REQUIREMENTS: "networkx==3.3"
   volumes:
     - ./dags:/opt/airflow/dags
     - ./plugins:/opt/airflow/plugins
