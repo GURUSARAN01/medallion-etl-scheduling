@@ -1,0 +1,13 @@
+{
+    "rows": 130,
+    "train_rows": 97,
+    "test_rows": 33,
+    "mae": 0.7646,
+    "rmse": 0.9142,
+    "r2": 1.0,
+    "cv_mae_mean": 0.8186,
+    "cv_mae_std": 0.1945,
+    "target_min": 146.739,
+    "target_max": 750.0,
+    "target_mean": 515.5889
+}
