@@ -1,0 +1,19 @@
+{
+  "base_path": "dbfs:/tmp/medallion_etl_scheduling",
+  "scale_rows": 10000,
+  "strategy": "static",
+  "layer": "Bronze",
+  "run_id_prefix": "azure_static_bronze_smoke",
+  "cluster_rules": {
+    "workers": 1,
+    "autoscaling": false,
+    "photon": false,
+    "auto_termination_minutes": 10,
+    "gpu": false
+  },
+  "budget_rules": {
+    "safe_target_usd": 70,
+    "stop_threshold_usd": 80,
+    "maximum_usd": 97
+  }
+}
