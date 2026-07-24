@@ -1,0 +1,18 @@
+Region: UAE North
+Workspace: dbw_thesis_etl_scheduling
+Cluster ID: 0723-092809-ezoy5gh9
+Runtime: Databricks Runtime 17.3 LTS
+Spark: 4.0
+Node type: Standard_D4ds_v4
+Cluster mode: Single node
+CPU cores: 4
+Memory: 16 GB
+Photon: Disabled
+Auto-termination: 10 minutes
+Airflow max_active_tasks: 2
+Dataset: TPC-DS SF1 selected subset
+Selected records: 5,229,704
+Reported compressed source size: 273.93 MB
+Official repetitions: 3 per strategy per layer
+Official runs: 27
+Official task observations: 117
