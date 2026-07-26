@@ -1,0 +1,3 @@
+variant,repetitions,mean_window_s,sd_window_s,mean_item_completion_from_start_s,mean_first_downstream_start_delay_s
+unlock_delayed,5,153.199,13.239,41.224,73.943
+unlock_early,5,123.190,8.447,4.305,39.973

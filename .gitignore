@@ -2,10 +2,10 @@
 # Python
 # =========================================================
 __pycache__/
+**/__pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.pyc
 *$py.class
 
 # Virtual environments
@@ -14,7 +14,7 @@ venv/
 env/
 ENV/
 
-# Python packaging / testing
+# Python packaging, tests, and tooling
 build/
 dist/
 *.egg-info/
@@ -25,22 +25,18 @@ htmlcov/
 .mypy_cache/
 .ruff_cache/
 
-
 # =========================================================
 # Airflow runtime files
 # =========================================================
+airflow/.env
 airflow/logs/
 airflow/*.pid
 airflow/airflow.db
 airflow/airflow-webserver.pid
 airflow/webserver_config.py
 
-# Airflow generated cache
-airflow/dags/__pycache__/
-airflow/plugins/__pycache__/
-
 # =========================================================
-# Docker / local database
+# Docker and local databases
 # =========================================================
 postgres_data/
 airflow/postgres_data/
@@ -48,20 +44,29 @@ airflow/postgres_data/
 *.sqlite
 *.sqlite3
 
-
 # =========================================================
-# Data files - do not push large benchmark data
+# Raw and large benchmark data
 # =========================================================
 data/tpcds/
-*.zip
-*.csv
-*.tsv
 *.parquet
 *.orc
 *.avro
 *.delta
 *.jsonl
+*.tsv
 
+# CSV files are ignored by default, then thesis result tables
+# are explicitly included for reproducibility.
+*.csv
+!analysis/outputs/*.csv
+!analysis/azure/bronze/*.csv
+!analysis/azure/silver/*.csv
+!analysis/azure/gold/*.csv
+!analysis/azure/official_n5/*.csv
+!analysis/azure/mechanisms/**/*.csv
+!analysis/azure/combined/*.csv
+!ml/features/*.csv
+!ml/training/outputs/*.csv
 
 # =========================================================
 # Databricks / Delta local artifacts
@@ -70,9 +75,8 @@ databricks/delta/
 .delta/
 _delta_log/
 
-
 # =========================================================
-# ML / experiment artifacts
+# ML and experiment artifacts
 # =========================================================
 ml/mlflow/
 mlruns/
@@ -83,9 +87,8 @@ mlruns/
 *.bin
 *.onnx
 
-
 # =========================================================
-# Secrets / credentials / local config
+# Secrets and credentials
 # =========================================================
 .env
 *.env
@@ -99,9 +102,8 @@ secrets/
 credentials.json
 token.json
 
-
 # =========================================================
-# IDE / OS files
+# IDE and operating-system files
 # =========================================================
 .vscode/
 .idea/
@@ -109,15 +111,13 @@ token.json
 Thumbs.db
 desktop.ini
 
-
 # =========================================================
-# Jupyter notebooks checkpoints
+# Jupyter checkpoints
 # =========================================================
 .ipynb_checkpoints/
 
-
 # =========================================================
-# Thesis / LaTeX build files
+# LaTeX build files
 # Keep .tex and .bib files tracked.
 # =========================================================
 *.aux
@@ -138,34 +138,13 @@ desktop.ini
 *.snm
 *.vrb
 
-
 # =========================================================
-# Temporary files
+# Temporary and backup files
 # =========================================================
 *.tmp
 *.temp
 *.bak
+*.bak_*
 *.swp
 ~$*
-# Local Airflow configuration and secrets
-airflow/.env
-
-# Airflow runtime logs
-
-# Python generated files
-**/__pycache__/
-
-# Local Python environment
-# Local Airflow configuration and secrets
-airflow/.env
-
-# Airflow runtime files
-airflow/logs/
-
-# Python generated files
-**/__pycache__/
-*.pyc
-*.pyo
-
-# Local Python environment
-.venv/
+*.zip

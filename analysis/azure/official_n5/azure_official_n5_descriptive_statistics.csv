@@ -1,0 +1,10 @@
+layer,strategy,repetitions,mean_processing_window_s,median_processing_window_s,sd_processing_window_s,min_processing_window_s,max_processing_window_s,coefficient_of_variation_pct
+bronze,static,5,128.545,118.320,20.641,111.918,159.927,16.06
+bronze,heft,5,141.546,142.324,2.036,138.814,143.877,1.44
+bronze,xgboost,5,118.035,116.494,7.925,110.260,130.845,6.71
+silver,static,5,117.797,113.475,7.754,112.738,131.035,6.58
+silver,heft,5,122.541,124.734,10.595,110.409,136.995,8.65
+silver,xgboost,5,123.276,123.539,5.862,117.931,132.336,4.76
+gold,static,5,93.902,92.802,4.506,89.589,101.345,4.8
+gold,heft,5,90.614,91.362,1.726,88.029,92.008,1.9
+gold,xgboost,5,96.323,93.606,7.166,89.694,108.426,7.44

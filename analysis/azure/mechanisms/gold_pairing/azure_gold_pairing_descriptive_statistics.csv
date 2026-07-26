@@ -1,0 +1,4 @@
+pairing,repetitions,mean_window_s,median_window_s,sd_window_s,min_window_s,max_window_s
+pair_ltv_region,5,94.032,92.898,6.866,86.492,105.102
+pair_ltv_top,5,90.313,89.872,1.551,88.857,92.510
+pair_top_region,5,107.586,95.194,22.604,88.808,141.193
