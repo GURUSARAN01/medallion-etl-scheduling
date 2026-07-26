@@ -1,0 +1,4 @@
+max_active_tasks,repetitions,mean_window_s,median_window_s,sd_window_s,min_window_s,max_window_s,coefficient_of_variation_pct,mean_sum_task_duration_s,mean_duration_to_window_ratio
+1,5,122.061,117.410,13.432,114.368,145.924,11,59.296,0.485
+2,5,77.785,78.243,1.391,75.920,79.435,1.79,87.426,1.123
+3,5,56.145,56.921,4.085,50.470,59.917,7.28,147.017,2.626

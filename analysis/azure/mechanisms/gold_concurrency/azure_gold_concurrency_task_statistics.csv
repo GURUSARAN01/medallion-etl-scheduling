@@ -1,0 +1,10 @@
+max_active_tasks,task_id,observations,mean_duration_s,median_duration_s,sd_duration_s,min_duration_s,max_duration_s
+1,agg_customer_ltv,5,27.342,25.207,7.049,23.017,39.811
+1,agg_sales_by_region,5,14.335,14.383,0.497,13.606,14.91
+1,agg_top_items,5,17.619,17.889,1.035,16.144,18.675
+2,agg_customer_ltv,5,43.564,40.024,8.506,38.206,58.529
+2,agg_sales_by_region,5,13.71,13.814,0.36,13.103,14.006
+2,agg_top_items,5,30.152,30.601,2.73,25.661,33.126
+3,agg_customer_ltv,5,52.403,53.611,4.207,47.01,57.436
+3,agg_sales_by_region,5,44.677,48.234,10.865,32.01,58.231
+3,agg_top_items,5,49.938,51.853,6.968,38.51,56.834
