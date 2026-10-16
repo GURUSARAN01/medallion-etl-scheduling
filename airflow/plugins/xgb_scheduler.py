@@ -3,9 +3,12 @@ from __future__ import annotations
 from typing import Dict, Tuple
 
 
-# XGBoost predicted priority scores.
-# These scores come from the trained offline XGBoost priority model.
-# Airflow uses them as priority_weight values through weight_rule="absolute".
+# Historical fixed task priorities for the XGBoost-labelled policy.
+# These scores equal the engineered training targets, not the saved model's
+# exact predictions. Offline verification confirms the same within-layer
+# task ranking for all 13 tasks (Bronze 6, Silver 4, Gold 3).
+# The constant name is retained to preserve compatibility with existing DAGs.
+# Airflow uses rounded integers with weight_rule="absolute".
 
 XGB_PREDICTED_SCORES: Dict[str, Dict[str, float]] = {
     "bronze": {
@@ -34,14 +37,16 @@ def predict_xgb_priority_weights(
     layer: str,
 ) -> Tuple[Dict[str, float], Dict[str, int], Dict[str, Dict[str, float]]]:
     """
-    Returns offline XGBoost-predicted priority scores for one Medallion layer.
+    Return historical, frozen priority scores for one Medallion layer.
 
-    The XGBoost model was trained outside Airflow using:
-    ml/training/train_xgboost.py
+    A separate offline XGBoost model was trained with
+    ml/training/train_xgboost.py. These stored values reproduce the engineered
+    priority targets; they are not numerical exports of the saved model's
+    predictions. The trained model induces the same within-layer ranking on
+    the 13 evaluated tasks (see ml/verification/).
 
-    The resulting predicted priority scores are exported here so that the Airflow
-    scheduler can use them without requiring pandas, scikit-learn, or xgboost
-    inside the Docker container.
+    Airflow uses these fixed values without importing pandas, scikit-learn,
+    or xgboost into the scheduler process. This function performs no inference.
     """
     if layer not in XGB_PREDICTED_SCORES:
         raise ValueError(
