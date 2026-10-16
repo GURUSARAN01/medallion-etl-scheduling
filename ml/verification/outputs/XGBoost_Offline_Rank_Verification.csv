@@ -1,0 +1,14 @@
+layer,task_id,engineered_priority_target,saved_model_prediction,historical_local_float_score,historical_azure_integer_weight,rounded_saved_model_prediction,same_numeric_score,target_equals_configured_score,local_float_matches_azure_integer,all_three_rankings_agree_in_layer
+bronze,ingest_catalog_sales,464.516000,464.732666,464.516000,465,465,False,True,True,True
+bronze,ingest_customer,530.435000,530.680969,530.435000,530,531,False,True,True,True
+bronze,ingest_date_dim,670.968000,670.529846,670.968000,671,671,False,True,True,True
+bronze,ingest_item,750.000000,748.336548,750.000000,750,748,False,True,True,True
+bronze,ingest_store_sales,364.165000,364.775391,364.165000,364,365,False,True,True,True
+bronze,ingest_web_sales,146.739000,148.503723,146.739000,147,149,False,True,True,True
+gold,agg_customer_ltv,750.000000,749.275757,750.000000,750,749,False,True,True,True
+gold,agg_sales_by_region,575.000000,574.810120,575.000000,575,575,False,True,True,True
+gold,agg_top_items,400.000000,400.492889,400.000000,400,400,False,True,True,True
+silver,clean_customer,545.833000,545.598206,545.833000,546,546,False,True,True,True
+silver,clean_item,505.000000,505.404266,505.000000,505,505,False,True,True,True
+silver,clean_sales,750.000000,749.114380,750.000000,750,749,False,True,True,True
+silver,join_fact_sales,250.000000,250.995621,250.000000,250,251,False,True,True,True
