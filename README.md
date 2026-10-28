@@ -8,6 +8,9 @@
 **Chair:** Chair of Data and Business Analytics  
 **Study platform:** Apache Airflow, Python, Azure Databricks, Spark, Delta Lake and PostgreSQL
 
+**Thesis document:** [Thesis PDF publication details and checksum](thesis/README.md). The PDF contains the reported final thesis analysis; this repository's archived evidence has the reproducibility limitations described below.
+
+
 > [!IMPORTANT]
 > **Archive status: partially reproducible, not a complete replay of the submitted thesis.** This repository includes the local benchmark, the **earlier** 45-run Azure benchmark, and three controlled cloud studies. The submitted thesis uses a **different, repeated** 45-run Azure benchmark as its primary cloud comparison. The repeated benchmark's raw records, corresponding executed-source revision and full figure-generation pipeline are **not supplied in this ZIP**. Consequently, successful offline tests of this archive do **not** independently reproduce all results in the submitted thesis. Read [the alignment audit](docs/SUBMISSION_ALIGNMENT_AUDIT.md) before reusing or publishing claims from this repository.
 
