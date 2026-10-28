@@ -83,6 +83,7 @@ mlruns/
 *.pkl
 *.pickle
 *.joblib
+!ml/training/outputs/xgboost_priority_model.joblib
 *.model
 *.bin
 *.onnx

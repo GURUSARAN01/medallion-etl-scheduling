@@ -1,0 +1,6 @@
+# Minimum compatible analysis requirements (not an archival lockfile).
+# Root requirements.txt covers the ML pipeline; add these for analysis.
+pandas>=2.2.3
+scipy>=1.12
+matplotlib>=3.8
+numpy>=1.26
